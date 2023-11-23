@@ -31,13 +31,14 @@ public class Basket {
     public void calculateTotalCost() {
         double totalCost = 0.0;
         for (Product product : products) {
+
             if (product != null) {
                 totalCost += product.getPrice();
             }
         }
         if (totalCost>10000){
-            totalCost= totalCost * 0.1;}
-        System.out.println("Общая стоимость товаров : " + totalCost);
+            totalCost= totalCost * 0.9;}
+        System.out.println("Общая стоимость товаров : " + totalCost );
     }
 
 }

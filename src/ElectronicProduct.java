@@ -15,18 +15,6 @@ public class ElectronicProduct implements Product {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Double weight) {
-        this.weight = weight;
-    }
-
     public static void setPriceSum(Double priceSum) {
         ElectronicProduct.priceSum = priceSum;
     }
@@ -44,8 +32,8 @@ public class ElectronicProduct implements Product {
     @Override
     public void displayInfo() {
         System.out.println("Name of product: " + name +
-                           "\nprice of product: " + price +
-                           "\nweight of product: " + weight
+                "\nprice of product: " + price +
+                "\nweight of product: " + weight
         );
     }
 
@@ -57,10 +45,6 @@ public class ElectronicProduct implements Product {
 
     @Override
     public void applyAdditionalDiscount() {
-        
-    }
-    public static Double getPriceSum() {
-        return priceSum;
-    }
 
+    }
 }

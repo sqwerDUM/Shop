@@ -46,8 +46,5 @@ public class ClothingProduct implements Product {
         return 0;
     }
 
-    public static Double getPriceSum() {
-        return priceSum;
-    }
 
 }

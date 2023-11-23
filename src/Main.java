@@ -20,9 +20,9 @@ public class Main {
 
         while (number != 0) {
             System.out.println("Выберите раздел товаров:\n" +
-                    "1. Електронника\n" +
+                    "1. Электронника\n" +
                     "2. Одежда\n" +
-                    "3. Закончить покупки");
+                    "0. Закончить покупки");
             int number2 = scanner.nextInt();
 
 
@@ -41,6 +41,7 @@ public class Main {
                         int number4 = scanner.nextInt();
                         if (number4 == 1) {
                             basket.addProduct(coffeeMachine);
+                            System.out.println("Выберите любую цифру чтоб продолжить:");
                         }
                     }
                     if (number3 == 2) {
@@ -51,6 +52,7 @@ public class Main {
                         int number5 = scanner.nextInt();
                         if (number5 == 1) {
                             basket.addProduct(notebook);
+                            System.out.println("Выберите любую цифру чтоб продолжить:");
                         }
                     }
                     if (number3 == 3) {
@@ -61,6 +63,7 @@ public class Main {
                         int number6 = scanner.nextInt();
                         if (number6 == 1) {
                             basket.addProduct(printer);
+                            System.out.println("Выберите любую цифру чтоб продолжить:");
                         }
                     }
 
@@ -76,20 +79,21 @@ public class Main {
                         System.out.println("Вы желаете приобрести данный подукт?\n" +
                                 "1.Добавить в корзину \n" +
                                 "0.Выйти в меню выбора\n");
-                        int number6 = scanner.nextInt();
-                        if (number6 == 1) {
+                        int number8 = scanner.nextInt();
+                        if (number8 == 1) {
                             basket.addProduct(sweater);
+                            System.out.println("Выберите любую цифру чтоб продолжить:");
                         }
                     }
-                    int number8 = scanner.nextInt();
-                    if (number8 == 2) {
+                    if (number7 == 2) {
                         downJacket.displayInfo();
                         System.out.println("Вы желаете приобрести данный подукт?\n" +
                                 "1.Добавить в корзину \n" +
                                 "0.Выйти в меню выбора\n");
-                        int number6 = scanner.nextInt();
-                        if (number6 == 1) {
+                        int number9 = scanner.nextInt();
+                        if (number9 == 1) {
                             basket.addProduct(downJacket);
+                            System.out.println("Выберите любую цифру чтоб продолжить:");
                         }
                     }
 
@@ -97,7 +101,8 @@ public class Main {
 
 
             }
-            number = scanner.nextInt();
+
+           number = scanner.nextInt();
         }
 
 
