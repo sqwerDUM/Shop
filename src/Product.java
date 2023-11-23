@@ -17,4 +17,5 @@ public interface Product {
     void applyAdditionalDiscount();
 
 
+    double getPrice();
 }

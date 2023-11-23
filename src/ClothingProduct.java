@@ -30,8 +30,20 @@ public class ClothingProduct implements Product {
     }
 
     @Override
+    public Boolean isFreeShipping() {
+        return Product.super.isFreeShipping();
+    }
+
+
+
+    @Override
     public void applyAdditionalDiscount() {
 
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
     }
 
     public static Double getPriceSum() {

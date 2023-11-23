@@ -2,6 +2,35 @@
 public class ElectronicProduct implements Product {
     private String name;
     private Double price;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
+
+    public static void setPriceSum(Double priceSum) {
+        ElectronicProduct.priceSum = priceSum;
+    }
+
     private Double weight;
     private static Double priceSum = 0.0;
 

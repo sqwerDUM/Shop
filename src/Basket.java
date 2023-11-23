@@ -1,22 +1,44 @@
 
 
 public class Basket {
-    ClothingProduct clothingProduct;
-    ElectronicProduct electronicProduct;
+
     private Product [] products;
 
-    public Basket(Product[] products) {
-        this.products = products;
+    public Basket(int capacity) {
+        this.products = new Product[capacity];
     }
 
-    public void calculateTotalSum (){
-        Double totalShippingCost = 0.0;
-        Double totalProductCost = ElectronicProduct.getPriceSum() + ClothingProduct.getPriceSum();
-        for (Product product: products) {
-            totalShippingCost += product.calculateShippingCost(50.5);//в километрах, наверное
+    public void addProduct(Product product) {
+        for (int i = 0; i < products.length; i++) {
+            if (products[i] == null) {
+                products[i] = product;
+                System.out.println("Добавлено в корзину:  ");
+                product.displayInfo();
+                break;
+            }
         }
-        System.out.printf("Total shipping cost: %.2f" +
-                           "\nTotal products cost: %.2f", totalShippingCost, totalProductCost
-        );
     }
+    public void display() {
+        System.out.println("В корзине:");
+        for (Product product : products) {
+            if (product != null) {
+                product.displayInfo();
+            }
+        }
+    }
+
+
+    public void calculateTotalCost() {
+        double totalCost = 0.0;
+        for (Product product : products) {
+            if (product != null) {
+                totalCost += product.getPrice();
+            }
+        }
+        if (totalCost>10000){
+            totalCost= totalCost * 0.1;}
+        System.out.println("Общая стоимость товаров : " + totalCost);
+    }
+
 }
+
